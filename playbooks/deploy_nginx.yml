@@ -1,0 +1,25 @@
+-
+ name: deploy website
+ hosts: servers
+ become: yes
+ tasks:
+   - name: install nginx
+     apt:
+       name: nginx
+       state: latest
+
+   - name: start nginx
+     service:
+      name: nginx
+      state: started
+
+   - name: Deploy nginx html
+     copy:
+       src: index.html
+       dest: /var/www/html
+         
+   - name: deploy css      
+     copy:  
+       src: style.css
+       dest: /var/www/html     
+

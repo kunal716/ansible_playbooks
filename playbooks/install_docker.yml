@@ -1,0 +1,14 @@
+-
+  name: install docker to the server
+  hosts: servers
+  become: yes
+  tasks:
+    - name: install docker
+      apt:
+        name: docker.io
+        state: latest
+    - name: start docker
+      service:
+        name: docker
+        state: started
+        enabled: yes  
