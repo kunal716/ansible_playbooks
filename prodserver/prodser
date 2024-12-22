@@ -1,6 +1,15 @@
 [servers]
 
-prod_1 ansible_host=20.193.132.251
+prod_1 ansible_host=
+prod_2 ansible_host=
+prod_3 ansible_host=
+prod_4 ansible_host=
+prod_5 ansible_host=
+prod_6 ansible_host=
+prod_7 ansible_host=
+prod_8 ansible_host=
+prod_9 ansible_host=
+prod_10 ansible_host=
 
 [servers:vars]
 ansible_python_interpreter=/usr/bin/python3
